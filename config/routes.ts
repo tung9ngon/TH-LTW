@@ -42,6 +42,18 @@
 		component: './toDoList',
 		icon: 'PlusCircleFilled',
 	},
+	{
+		path: '/randomnumber',
+		name: 'RandomNumber',
+		component: './RandomNumber',
+		icon: 'PlayCircleOutlined',
+	},
+	{
+		path: '/managesubject',
+		name: 'ManageSubject',
+		component: './ManageSubject',
+		icon: 'MinusSquareOutlined',
+	},
 
 	// DANH MUC HE THONG
 	// {
