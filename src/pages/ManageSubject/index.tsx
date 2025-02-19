@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-// Định nghĩa interface cho dữ liệu
+import "./index.css";
 interface SubjectCategory {
   id: string;
   name: string;
@@ -55,7 +54,7 @@ const App: React.FC = () => {
   }, [goals]);
   return (
     <div style={{ padding: "20px" }}>
-      <h1>Ứng dụng Quản lý Tiến độ Học tập</h1>
+      <h1>Quản lý tiến độ học tập</h1>
       <div style={{ marginBottom: "20px" }}>
         <button onClick={() => setSelectedTab("subjects")}>
           Danh mục môn học
@@ -126,7 +125,7 @@ const SubjectManager: React.FC<SubjectManagerProps> = ({
   };
   return (
     <div>
-      <h2>Quản lý Danh mục Môn học</h2>
+      <h2>Quản lý danh mục môn học</h2>
       <input
         type="text"
         placeholder="Thêm môn học mới"
@@ -471,4 +470,4 @@ const MonthlyGoalManager: React.FC<MonthlyGoalManagerProps> = ({
     </div>
   );
 };
-ReactDOM.render(<App />, document.getElementById("root"));
+export default App;
