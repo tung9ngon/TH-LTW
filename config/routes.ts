@@ -54,6 +54,18 @@
 		component: './ManageSubject',
 		icon: 'MinusSquareOutlined',
 	},
+	{
+		path: '/rock-paper-scissors',
+		name: 'KeoBuaBao',
+		component: './RockPaperScissors',
+		icon: 'ScissorOutlined',
+	},
+	{
+		path: '/nganhang-cauhoi',
+		name: 'Nganhangcauhoi',
+		component: './NganHangCauHoi',
+		
+	}
 
 	// DANH MUC HE THONG
 	// {
