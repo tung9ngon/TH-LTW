@@ -65,8 +65,20 @@
 		name: 'Nganhangcauhoi',
 		component: './NganHangCauHoi',
 		
-	}
-
+	},
+	{
+		path: '/qualy-lichhen',
+		name: 'Quanlylichhen',
+		component: './QuanLyLichHen',
+		
+	},
+	{
+		path: '/quanly-nhanviendichvu',
+		name: 'Quanlynhanviendichvu',
+		component: './QuanLyNhanVienDichVu',
+		
+	},
+	
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
