@@ -78,7 +78,12 @@
 		component: './QuanLyNhanVienDichVu',
 		
 	},
-	
+	{
+		path: '/bao-cao',
+		name: 'Baocao',
+		component: './BaoCao',
+		
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
