@@ -30,58 +30,11 @@
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
+
 	{
-		path: '/random-user',
-		name: 'RandomUser',
-		component: './RandomUser',
-		icon: 'ArrowsAltOutlined',
-	},
-	{
-		path: '/todolist',
-		name: 'ToDoList',
-		component: './toDoList',
-		icon: 'PlusCircleFilled',
-	},
-	{
-		path: '/randomnumber',
-		name: 'RandomNumber',
-		component: './RandomNumber',
-		icon: 'PlayCircleOutlined',
-	},
-	{
-		path: '/managesubject',
-		name: 'ManageSubject',
-		component: './ManageSubject',
-		icon: 'MinusSquareOutlined',
-	},
-	{
-		path: '/rock-paper-scissors',
-		name: 'KeoBuaBao',
-		component: './RockPaperScissors',
-		icon: 'ScissorOutlined',
-	},
-	{
-		path: '/nganhang-cauhoi',
-		name: 'Nganhangcauhoi',
-		component: './NganHangCauHoi',
-		
-	},
-	{
-		path: '/qualy-lichhen',
-		name: 'Quanlylichhen',
-		component: './QuanLyLichHen',
-		
-	},
-	{
-		path: '/quanly-nhanviendichvu',
-		name: 'Quanlynhanviendichvu',
-		component: './QuanLyNhanVienDichVu',
-		
-	},
-	{
-		path: '/bao-cao',
-		name: 'Baocao',
-		component: './BaoCao',
+		path: '/Course-Management',
+		name: 'coursremanagement',
+		component: './CourseManagement',
 		
 	},
 	// DANH MUC HE THONG
