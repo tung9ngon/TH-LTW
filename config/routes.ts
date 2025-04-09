@@ -30,11 +30,16 @@
 		component: './TienIch/GioiThieu',
 		hideInMenu: true,
 	},
-
 	{
-		path: '/Course-Management',
-		name: 'coursremanagement',
-		component: './CourseManagement',
+		path: '/random-user',
+		name: 'RandomUser',
+		component: './RandomUser',
+		icon: 'ArrowsAltOutlined',
+	},
+	{
+		path: '/hethong-quanlidon',
+		name: 'Hethongquanlidon',
+		component: './HeThongQuanLiDon',
 		
 	},
 	// DANH MUC HE THONG
