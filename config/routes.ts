@@ -36,10 +36,11 @@
 		component: './RandomUser',
 		icon: 'ArrowsAltOutlined',
 	},
+	
 	{
-		path: '/hethong-quanlidon',
-		name: 'Hethongquanlidon',
-		component: './HeThongQuanLiDon',
+		path: '/web-dulich',
+		name: 'WebDuLich',
+		component: './webdulich',
 		
 	},
 	// DANH MUC HE THONG
