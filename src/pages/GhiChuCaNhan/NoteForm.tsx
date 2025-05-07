@@ -1,44 +1,59 @@
-import React, { useState } from "react";
+import React from "react";
 import { Note } from "../../services/Types/t";
+import { Input, Button, Checkbox, Form } from "antd";
 
 interface Props {
   onAdd: (note: Note) => void;
 }
 
 const NoteForm: React.FC<Props> = ({ onAdd }) => {
-  const [title, setTitle] = useState("");
-  const [content, setContent] = useState("");
-  const [tag, setTag] = useState("");
-  const [important, setImportant] = useState(false);
+  const [form] = Form.useForm();
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleFinish = (values: any) => {
     const newNote: Note = {
       id: Date.now().toString(),
-      title,
-      content,
-      tag,
+      title: values.title,
+      content: values.content,
+      tag: values.tag || "",
       date: new Date().toISOString().split("T")[0],
-      important,
+      important: values.important || false,
     };
     onAdd(newNote);
-    setTitle("");
-    setContent("");
-    setTag("");
-    setImportant(false);
+    form.resetFields();
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: "1rem" }}>
-      <input placeholder="Tiêu đề" value={title} onChange={e => setTitle(e.target.value)} required />
-      <textarea placeholder="Nội dung" value={content} onChange={e => setContent(e.target.value)} required />
-      <input placeholder="Tag / Danh mục" value={tag} onChange={e => setTag(e.target.value)} />
-      <label>
-        <input type="checkbox" checked={important} onChange={e => setImportant(e.target.checked)} />
-        Quan trọng
-      </label>
-      <button type="submit">Thêm</button>
-    </form>
+    <Form form={form} onFinish={handleFinish} layout="vertical" style={{ marginBottom: "1rem" }}>
+      <Form.Item
+        label="Tiêu đề"
+        name="title"
+        rules={[{ required: true, message: "Vui lòng nhập tiêu đề!" }]}
+      >
+        <Input placeholder="Tiêu đề" />
+      </Form.Item>
+
+      <Form.Item
+        label="Nội dung"
+        name="content"
+        rules={[{ required: true, message: "Vui lòng nhập nội dung!" }]}
+      >
+        <Input.TextArea placeholder="Nội dung" />
+      </Form.Item>
+
+      <Form.Item label="Tag / Danh mục" name="tag">
+        <Input placeholder="Tag / Danh mục" />
+      </Form.Item>
+
+      <Form.Item name="important" valuePropName="checked">
+        <Checkbox>Quan trọng</Checkbox>
+      </Form.Item>
+
+      <Form.Item>
+        <Button type="primary" htmlType="submit">
+          Thêm
+        </Button>
+      </Form.Item>
+    </Form>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Note } from "../../services/Types/t";
+import { Card, Button } from "antd";
 
 interface Props {
   note: Note;
@@ -8,12 +9,17 @@ interface Props {
 
 const NoteCard: React.FC<Props> = ({ note, onDelete }) => {
   return (
-    <div style={{ border: "1px solid #ccc", padding: 10, marginBottom: 10, background: note.important ? "#fffae6" : "#fff" }}>
-      <h3>{note.title}</h3>
+    <Card
+      title={note.title}
+      extra={<Button danger={true} onClick={() => onDelete(note.id)}>Xoá</Button>}
+      style={{
+        background: note.important ? "#fffae6" : "#fff",
+        marginBottom: 10,
+      }}
+    >
       <p>{note.content}</p>
-      <small>{note.date} | #{note.tag}</small><br />
-      <button onClick={() => onDelete(note.id)}>Xoá</button>
-    </div>
+      <small>{note.date} | #{note.tag}</small>
+    </Card>
   );
 };
 
