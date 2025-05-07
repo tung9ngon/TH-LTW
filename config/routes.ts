@@ -44,9 +44,14 @@
 		
 	},
 	{
+		path:'/quanlicongviec',
+		name:'Quản lí công việc',
+		component: './quanlicongviec'
+	},
+	{
 		path: '/ghichu-canhan',
 		name: 'GhiChuCaNhan',
-		component: './ghichucanhan',
+		component: './GhiChuCaNhan',
 		
 	},
 	// DANH MUC HE THONG
