@@ -43,6 +43,12 @@
 		component: './webdulich',
 		
 	},
+	{
+		path: '/ghichu-canhan',
+		name: 'GhiChuCaNhan',
+		component: './ghichucanhan',
+		
+	},
 	// DANH MUC HE THONG
 	// {
 	// 	name: 'DanhMuc',
